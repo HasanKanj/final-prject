@@ -1,0 +1,60 @@
+.fp {
+  width: 100%;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.fpItem {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fpImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.fpName {
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fpCity {
+  font-weight: 300;
+  text-align: center;
+}
+
+.fpPrice {
+  font-weight: 500;
+  text-align: center;
+}
+
+.fpRating > button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 3px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.fpRating > span {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .fp {
+    grid-template-columns: 1fr;
+  }
+
+  .fpItem:hover {
+    transform: none; /* Remove the transform scale on hover */
+  }
+}
